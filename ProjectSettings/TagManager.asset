@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Celestial
   - Sun
+  - Planet
+  - OrbitSimulator
   layers:
   - Default
   - TransparentFX
