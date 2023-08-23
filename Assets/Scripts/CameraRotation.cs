@@ -13,6 +13,7 @@ public class CameraRotation : MonoBehaviour
     private float currentZoomDistance;
 
     public Transform targetToFollow;
+    private Transform currentFocus;
 
     void Start()
     {
@@ -35,6 +36,20 @@ public class CameraRotation : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Transform hitTransform = hit.transform;
+                if (hitTransform.CompareTag("Celestial")) // Use a tag correta do objeto
+                {
+                    SetFocus(hitTransform);
+                }
+            }
+        }
+
         float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
         currentZoomDistance = Mathf.Clamp(currentZoomDistance - zoomAmount, minZoomDistance, maxZoomDistance);
 
@@ -55,4 +70,14 @@ public class CameraRotation : MonoBehaviour
     {
         targetToFollow = null;
     }
+
+    private void SetFocus(Transform newFocus)
+    {
+        if (newFocus != currentFocus)
+        {
+            currentFocus = newFocus;
+            targetToFollow = newFocus;
+        }
+    }
+
 }
