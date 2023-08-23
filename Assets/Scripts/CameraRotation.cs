@@ -9,7 +9,16 @@ public class CameraRotation : MonoBehaviour
     public float maxZoomDistance = 20.0f; // Distância máxima de zoom
 
     private Vector3 lastMousePosition;
+    private Vector3 initialOffset;
+    private float currentZoomDistance;
+
     public Transform targetToFollow;
+
+    void Start()
+    {
+        initialOffset = transform.position - targetToFollow.position;
+        currentZoomDistance = initialOffset.magnitude;
+    }
 
     void Update()
     {
@@ -27,33 +36,19 @@ public class CameraRotation : MonoBehaviour
         }
 
         float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
-        Vector3 zoomVector = transform.forward * zoomAmount;
+        currentZoomDistance = Mathf.Clamp(currentZoomDistance - zoomAmount, minZoomDistance, maxZoomDistance);
 
-        // Ajustar a distância de zoom
-        if (targetToFollow != null)
-        {
-            float currentZoomDistance = Vector3.Distance(transform.position, targetToFollow.position);
-            float newZoomDistance = Mathf.Clamp(currentZoomDistance + zoomAmount, minZoomDistance, maxZoomDistance);
-
-            // Ajustar a variável maxZoomDistance
-            maxZoomDistance = newZoomDistance;
-
-            transform.position += zoomVector;
-        }
-
-        if (targetToFollow != null)
-        {
-            Vector3 desiredPosition = targetToFollow.position - transform.forward * maxZoomDistance;
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
-            transform.position = smoothedPosition;
-        }
-
+        Vector3 desiredPosition = targetToFollow.position - transform.forward * currentZoomDistance;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        transform.position = smoothedPosition;
     }
 
     public void FocusAndFollow(Transform target)
     {
         targetToFollow = target;
         lastMousePosition = Input.mousePosition;
+        initialOffset = transform.position - targetToFollow.position;
+        currentZoomDistance = initialOffset.magnitude;
     }
 
     public void StopFollowing()

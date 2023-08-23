@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.15961413, g: 0.18448211, b: 0.20293063, a: 1}
+  m_IndirectSpecularColor: {r: 0.15961444, g: 0.18448243, b: 0.20293114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -402,8 +402,8 @@ MonoBehaviour:
   rotationSpeed: 20
   zoomSpeed: 5000
   followSpeed: 0.8
-  minZoomDistance: 50
-  maxZoomDistance: 10
+  minZoomDistance: 10
+  maxZoomDistance: 60
   targetToFollow: {fileID: 1349997973}
 --- !u!1 &410087039
 GameObject:
