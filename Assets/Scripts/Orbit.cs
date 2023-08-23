@@ -6,6 +6,7 @@ public class Orbit : MonoBehaviour
 {
     public Transform centerObject;
     public float orbitSpeed = 1.0f;
+    public float speed = 70.0f;
 
     private Vector3 startPosition;
     private Vector3 axisOfRotation;
@@ -36,7 +37,9 @@ public class Orbit : MonoBehaviour
             transform.position = desiredPosition;
 
             // Mantém a rotação do objeto virada para o centro
-            transform.LookAt(centerObject);
+           // transform.LookAt(centerObject);
         }
+
+        this.transform.Rotate(Vector3.up, Time.deltaTime * speed);
     }
 }
