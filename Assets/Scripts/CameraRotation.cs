@@ -1,27 +1,38 @@
 using UnityEngine;
 
-public class CameraRotation : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
+    // Variáveis de rotação
     public float rotationSpeed = 1.0f;
-    public float zoomSpeed = 10.0f;
-    public float followSpeed = 0.8f;
-    public float minZoomDistance = 1.0f; // Distância mínima de zoom
-    public float maxZoomDistance = 20.0f; // Distância máxima de zoom
 
-    private Vector3 lastMousePosition;
-    private Vector3 initialOffset;
+    // Variáveis de zoom
+    public float zoomSpeed = 10.0f;
+    public float minZoomDistance = 1.0f;
+    public float maxZoomDistance = 20.0f;
     private float currentZoomDistance;
 
+    // Variáveis de foco
+    public float followSpeed = 0.8f;
     public Transform targetToFollow;
     private Transform currentFocus;
+    private Vector3 lastMousePosition;
+    private Vector3 initialOffset;
 
-    void Start()
+    private void Start()
     {
+        targetToFollow = GameObject.Find("Sun").transform;
         initialOffset = transform.position - targetToFollow.position;
         currentZoomDistance = initialOffset.magnitude;
     }
 
-    void Update()
+    private void Update()
+    {
+        HandleRotation();
+        HandleZoom();
+        HandleFocus();
+    }
+
+    private void HandleRotation()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -35,27 +46,35 @@ public class CameraRotation : MonoBehaviour
             transform.RotateAround(targetToFollow.position, transform.right, -delta.y * rotationSpeed * Time.deltaTime);
             lastMousePosition = Input.mousePosition;
         }
+    }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                Transform hitTransform = hit.transform;
-                if (hitTransform.CompareTag("Celestial")) // Use a tag correta do objeto
-                {
-                    SetFocus(hitTransform);
-                }
-            }
-        }
-
+    private void HandleZoom()
+    {
         float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
         currentZoomDistance = Mathf.Clamp(currentZoomDistance - zoomAmount, minZoomDistance, maxZoomDistance);
 
         Vector3 desiredPosition = targetToFollow.position - transform.forward * currentZoomDistance;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
+    }
+
+    private void HandleFocus()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Transform hitTransform = hit.transform;
+
+                if (hitTransform.CompareTag("Celestial"))
+                {
+                    SetFocus(hitTransform);
+                }
+            }
+        }
     }
 
     public void FocusAndFollow(Transform target)
@@ -79,5 +98,4 @@ public class CameraRotation : MonoBehaviour
             targetToFollow = newFocus;
         }
     }
-
 }

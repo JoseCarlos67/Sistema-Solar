@@ -6,20 +6,21 @@ public class Orbit : MonoBehaviour
 {
     public Transform centerObject;
     public float orbitSpeed = 1.0f;
-    public float speed = 70.0f;
-
+    public float rotationSpeed = 70.0f;
     private Vector3 startPosition;
-    private Vector3 axisOfRotation;
     private float orbitalRadius;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
+    {
+        InitializeOrbit();
+    }
+
+    private void Update()
     {
         if (centerObject != null)
         {
-            startPosition = transform.position;
-            orbitalRadius = Vector3.Distance(centerObject.position, transform.position);
-            axisOfRotation = Vector3.up;
+            UpdateOrbit();
+            UpdateRotation();
         }
         else
         {
@@ -27,19 +28,25 @@ public class Orbit : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitializeOrbit()
     {
         if (centerObject != null)
         {
-            // Mantém o raio orbital constante
-            Vector3 desiredPosition = centerObject.position + Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0) * (transform.position - centerObject.position).normalized * orbitalRadius;
-            transform.position = desiredPosition;
-
-            // Mantém a rotação do objeto virada para o centro
-           // transform.LookAt(centerObject);
+            startPosition = transform.position;
+            orbitalRadius = Vector3.Distance(centerObject.position, transform.position);
         }
+    }
 
-        this.transform.Rotate(Vector3.up, Time.deltaTime * speed);
+    private void UpdateOrbit()
+    {
+        Vector3 offsetFromCenter = transform.position - centerObject.position;
+        Quaternion rotation = Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0);
+        Vector3 newPosition = centerObject.position + rotation * (offsetFromCenter.normalized * orbitalRadius);
+        transform.position = newPosition;
+    }
+
+    private void UpdateRotation()
+    {
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }
