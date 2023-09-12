@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2d056ac30ecc9e542b26e06133f23602, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.0014785795, g: 0.0013591028, b: 0.0012890887, a: 1}
+  m_IndirectSpecularColor: {r: 0.15961413, g: 0.18448211, b: 0.20293063, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -231,11 +231,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 631870416}
+      addedObject: {fileID: 631870420}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 631870420}
+      addedObject: {fileID: 631870424}
+    - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 631870425}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!4 &22959635 stripped
 Transform:
@@ -627,11 +631,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1496527278}
+      addedObject: {fileID: 1496527279}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1496527279}
+      addedObject: {fileID: 1496527284}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!1 &631870411 stripped
 GameObject:
@@ -666,21 +670,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &631870416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631870411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 1
-  rotationSpeed: 70
 --- !u!96 &631870420
 TrailRenderer:
   serializedVersion: 3
@@ -785,6 +774,35 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &631870424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631870411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 2
+--- !u!114 &631870425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631870411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a84f71ece9dc774cb2cd12a7d07720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 70
+  rotationOn: 0
+  planet: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,11 +1051,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1747097764}
+      addedObject: {fileID: 1747097765}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1747097765}
+      addedObject: {fileID: 1747097769}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!4 &870466328 stripped
 Transform:
@@ -1155,11 +1173,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1080920725}
+      addedObject: {fileID: 1080920726}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1080920726}
+      addedObject: {fileID: 1080920731}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &1080920720
 Rigidbody:
@@ -1188,21 +1206,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1080920725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987578074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 0.008
-  rotationSpeed: 70
 --- !u!96 &1080920726
 TrailRenderer:
   serializedVersion: 3
@@ -1307,6 +1310,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1080920731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987578074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1001 &1096920649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1516,11 +1533,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2042882062}
+      addedObject: {fileID: 2042882063}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2042882063}
+      addedObject: {fileID: 2042882068}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!1001 &1349997952
 PrefabInstance:
@@ -1626,11 +1643,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349997962}
+      addedObject: {fileID: 1349997963}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349997963}
+      addedObject: {fileID: 1349997968}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &1349997957
 Rigidbody:
@@ -1659,21 +1676,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1349997962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129109607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 0.8
-  rotationSpeed: 70
 --- !u!96 &1349997963
 TrailRenderer:
   serializedVersion: 3
@@ -1778,6 +1780,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1349997968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129109607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1001 &1357823336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1868,11 +1884,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3341221655799370223, guid: e767546f98015dd4098c111655b8f447,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1357823339}
+      addedObject: {fileID: 1357823343}
     - targetCorrespondingSourceObject: {fileID: 3341221655799370223, guid: e767546f98015dd4098c111655b8f447,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1357823343}
+      addedObject: {fileID: 1357823348}
+    - targetCorrespondingSourceObject: {fileID: 3341221655799370223, guid: e767546f98015dd4098c111655b8f447,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357823347}
   m_SourcePrefab: {fileID: 100100000, guid: e767546f98015dd4098c111655b8f447, type: 3}
 --- !u!4 &1357823337 stripped
 Transform:
@@ -1886,21 +1906,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1357823336}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1357823339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357823338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 22959635}
-  orbitSpeed: 13
-  rotationSpeed: 70
 --- !u!96 &1357823343
 TrailRenderer:
   serializedVersion: 3
@@ -2005,6 +2010,35 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1357823347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357823338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a84f71ece9dc774cb2cd12a7d07720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 70
+  rotationOn: 0
+  planet: {fileID: 0}
+--- !u!114 &1357823348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357823338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 22959635}
+  orbitSpeed: 1
 --- !u!1 &1496527269 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -2038,21 +2072,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1496527278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496527269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 1.5
-  rotationSpeed: 70
 --- !u!96 &1496527279
 TrailRenderer:
   serializedVersion: 3
@@ -2157,6 +2176,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1496527284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496527269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 2
 --- !u!1001 &1635787248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2422,21 +2455,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1747097764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747097755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 0.2
-  rotationSpeed: 70
 --- !u!96 &1747097765
 TrailRenderer:
   serializedVersion: 3
@@ -2541,6 +2559,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1747097769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747097755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1 &1775096801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -2580,21 +2612,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2042882062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042882053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 0.1
-  rotationSpeed: 70
 --- !u!96 &2042882063
 TrailRenderer:
   serializedVersion: 3
@@ -2699,6 +2716,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &2042882068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042882053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1001 &2095231301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2803,11 +2834,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095231311}
+      addedObject: {fileID: 2095231312}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095231312}
+      addedObject: {fileID: 2095231317}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &2095231306
 Rigidbody:
@@ -2836,21 +2867,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2095231311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280235845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 0.3
-  rotationSpeed: 70
 --- !u!96 &2095231312
 TrailRenderer:
   serializedVersion: 3
@@ -2955,6 +2971,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &2095231317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280235845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1001 &1888470922769446813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3059,11 +3089,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1888470922769446823}
+      addedObject: {fileID: 1888470922769446824}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1888470922769446824}
+      addedObject: {fileID: 1888470922769446829}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &1888470922769446818
 Rigidbody:
@@ -3092,21 +3122,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1888470922769446823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775096801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359276b76ebbd5c448c4f6ad33f2a912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
-  rotationSpeed: 70
 --- !u!96 &1888470922769446824
 TrailRenderer:
   serializedVersion: 3
@@ -3211,6 +3226,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1888470922769446829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775096801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 1687271790}
+  orbitSpeed: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
