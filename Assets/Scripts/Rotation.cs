@@ -6,29 +6,25 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
+    public Vector3 rotationAxis = Vector3.up; // O eixo de rotação desejado
     public float rotationSpeed = 70.0f;
-    public bool rotationOn = true;
-    public Transform planet;
-    public Vector3 customRotationAxis = Vector3.up;
 
+    private Transform planetAxis; // Referência ao objeto do cilindro representando o eixo
 
-
-    private void Update()
+    private void Start()
     {
-        if(rotationOn == true)
+        // Encontre o objeto do cilindro (o eixo) como um filho deste planeta
+        planetAxis = transform.Find("Axis"); // Altere "Axis" para o nome real do objeto do cilindro.
+
+        if (planetAxis == null)
         {
-            UpdateRotation();
-        } else
-        {
-            planet = GetComponent<Traslation>().centerObject.transform;
-            transform.LookAt(planet);
+            Debug.LogError("Axis object not found. Make sure the cylinder is a child of the planet.");
         }
-        
     }
 
-    private void UpdateRotation()
+    private void FixedUpdate()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-        transform.Rotate(customRotationAxis, rotationSpeed * Time.deltaTime);
+        // Gire o planeta em torno do eixo desejado
+        transform.Rotate(rotationAxis, rotationSpeed * Time.fixedDeltaTime);
     }
 }
