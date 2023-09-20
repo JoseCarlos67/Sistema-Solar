@@ -11,22 +11,26 @@ public class CameraController : MonoBehaviour
     public float maxZoomDistance = 20.0f;
     private float currentZoomDistance;
 
+    private GameObject planetFocus;
+
     // Variáveis de foco
     public float followSpeed = 0.8f;
     public Transform targetToFollow;
     private Transform currentFocus;
     private Vector3 lastMousePosition;
     private Vector3 initialOffset;
+    public Traslation planetTraslation;
 
     private void Start()
     {
-        targetToFollow = GameObject.Find("Sun").transform;
+        targetToFollow = GameObject.Find("Mars").transform;
+        planetTraslation = targetToFollow.GetComponent<Traslation>();
         initialOffset = transform.position - targetToFollow.position;
         currentZoomDistance = initialOffset.magnitude;
     }
 
     private void Update()
-    {
+    {        
         HandleRotation();
         HandleZoom();
         HandleFocus();
@@ -72,6 +76,17 @@ public class CameraController : MonoBehaviour
                 if (hitTransform.CompareTag("Celestial"))
                 {
                     SetFocus(hitTransform);
+
+                    // Atualize explicitamente a variável planetTraslation
+                    planetTraslation = planetFocus.GetComponent<Traslation>();
+                    if (planetTraslation != null)
+                    {
+                        followSpeed = planetTraslation.orbitSpeed;
+                    }
+                    else
+                    {
+                        Debug.LogError("O planeta não tem o componente Traslation.");
+                    }
                 }
             }
         }
@@ -96,6 +111,7 @@ public class CameraController : MonoBehaviour
         {
             currentFocus = newFocus;
             targetToFollow = newFocus;
+            planetTraslation = newFocus.gameObject;   
         }
     }
 }
