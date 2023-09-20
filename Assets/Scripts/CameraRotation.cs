@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        targetToFollow = GameObject.Find("Mars").transform;
+        targetToFollow = GameObject.Find("Sun").transform;
         planetTraslation = targetToFollow.GetComponent<Traslation>();
         initialOffset = transform.position - targetToFollow.position;
         currentZoomDistance = initialOffset.magnitude;
