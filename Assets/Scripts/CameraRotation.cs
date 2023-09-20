@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -78,7 +79,7 @@ public class CameraController : MonoBehaviour
                     SetFocus(hitTransform);
 
                     // Atualize explicitamente a variável planetTraslation
-                    planetTraslation = planetFocus.GetComponent<Traslation>();
+                    planetTraslation = targetToFollow.GetComponent<Traslation>();
                     if (planetTraslation != null)
                     {
                         followSpeed = planetTraslation.orbitSpeed;
@@ -111,7 +112,7 @@ public class CameraController : MonoBehaviour
         {
             currentFocus = newFocus;
             targetToFollow = newFocus;
-            planetTraslation = newFocus.gameObject;   
+            
         }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.15961413, g: 0.18448211, b: 0.20293063, a: 1}
+  m_IndirectSpecularColor: {r: 0.15961444, g: 0.18448243, b: 0.20293114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,11 +346,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 631870421}
+      addedObject: {fileID: 631870425}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 631870425}
+      addedObject: {fileID: 631870421}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!4 &22959635 stripped
 Transform:
@@ -520,6 +520,7 @@ MonoBehaviour:
   maxZoomDistance: 60
   followSpeed: 0.8
   targetToFollow: {fileID: 1687271790}
+  planetTraslation: {fileID: 0}
 --- !u!1 &377360620
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +965,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1496527288}
+    - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1496527280}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!1 &631870411 stripped
@@ -1116,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 3.5
 --- !u!114 &631870425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,7 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 30
+  rotationSpeed: 7
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,11 +1392,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1747097766}
+      addedObject: {fileID: 1747097770}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1747097770}
+      addedObject: {fileID: 1747097766}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!4 &870466328 stripped
 Transform:
@@ -1517,11 +1522,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1080920727}
+      addedObject: {fileID: 1080920732}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1080920732}
+      addedObject: {fileID: 1080920727}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &1080920720
 Rigidbody:
@@ -1667,7 +1672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 0.5
 --- !u!4 &1080920731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507630756215216082, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -1687,7 +1692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 70
+  rotationSpeed: 0.1
 --- !u!1001 &1096920649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2012,11 +2017,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2042882064}
+      addedObject: {fileID: 2042882069}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2042882069}
+      addedObject: {fileID: 2042882064}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!1001 &1349997952
 PrefabInstance:
@@ -2130,11 +2135,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349997974}
+      addedObject: {fileID: 1349997979}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349997979}
+      addedObject: {fileID: 1349997974}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &1349997957
 Rigidbody:
@@ -2286,7 +2291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 1.5
 --- !u!114 &1349997979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,7 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 20
+  rotationSpeed: 1
 --- !u!1001 &1357823336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2395,11 +2400,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3341221655799370223, guid: e767546f98015dd4098c111655b8f447,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1357823348}
-    - targetCorrespondingSourceObject: {fileID: 3341221655799370223, guid: e767546f98015dd4098c111655b8f447,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1357823352}
+      addedObject: {fileID: 1357823356}
   m_SourcePrefab: {fileID: 100100000, guid: e767546f98015dd4098c111655b8f447, type: 3}
 --- !u!4 &1357823337 stripped
 Transform:
@@ -2413,21 +2414,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1357823336}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1357823348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357823338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba5f3412baae124eb308c1613ff5917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerObject: {fileID: 22959635}
-  orbitSpeed: 1
---- !u!114 &1357823352
+--- !u!114 &1357823356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2440,7 +2427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 22959635}
-  orbitSpeed: 2
+  orbitSpeed: 1
 --- !u!1 &1401465211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,13 +2685,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 3.5
 --- !u!4 &1496527284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507630756215216082, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
     type: 3}
   m_PrefabInstance: {fileID: 537221077}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496527288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496527269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a84f71ece9dc774cb2cd12a7d07720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 7
 --- !u!1 &1519115696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,7 +3302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 0.8
 --- !u!114 &1747097770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3315,7 +3316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 70
+  rotationSpeed: 0.3
 --- !u!1 &1775096801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -3472,7 +3473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 0.6
 --- !u!4 &2042882068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507630756215216082, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -3492,7 +3493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 70
+  rotationSpeed: 0.2
 --- !u!1 &2056224242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,11 +3820,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095231313}
+      addedObject: {fileID: 2095231319}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095231319}
+      addedObject: {fileID: 2095231313}
   m_SourcePrefab: {fileID: 100100000, guid: 5d0956726ce63744da7af9b2b9e3fbfb, type: 3}
 --- !u!54 &2095231306
 Rigidbody:
@@ -3969,7 +3970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 1
 --- !u!4 &2095231317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507630756215216082, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
@@ -3989,7 +3990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 70
+  rotationSpeed: 0.5
 --- !u!1001 &1888470922769446813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4099,6 +4100,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1888470922769446824}
+    - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888470922769446833}
     - targetCorrespondingSourceObject: {fileID: 7979152032300299784, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
         type: 3}
       insertIndex: -1
@@ -4248,13 +4253,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerObject: {fileID: 1687271790}
-  orbitSpeed: 4
+  orbitSpeed: 5
 --- !u!4 &1888470922769446829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507630756215216082, guid: 5d0956726ce63744da7af9b2b9e3fbfb,
     type: 3}
   m_PrefabInstance: {fileID: 1888470922769446813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888470922769446833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775096801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a84f71ece9dc774cb2cd12a7d07720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
