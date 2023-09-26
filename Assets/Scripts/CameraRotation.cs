@@ -35,6 +35,15 @@ public class CameraController : MonoBehaviour
         HandleRotation();
         HandleZoom();
         HandleFocus();
+
+        // Verifica se uma tecla númerica foi presionada 
+        for (int i = 0; i <= 8; i++)
+        {
+            if (Input.GetKeyDown(i.ToString()))
+            {
+                ChangeFocusByNumber(i);
+            }
+        }
     }
 
     private void HandleRotation()
@@ -90,6 +99,29 @@ public class CameraController : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void ChangeFocusByNumber(int planetNumber)
+    {
+        // Define os nomes dos planetas com base nos seus GameObjects
+        string[] planetNames = {"Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+
+        // Verifica se o número do planeta está dentro dos limites
+        if (planetNumber >= 0 && planetNumber <= planetNames.Length)
+        {
+            Transform newFocus = GameObject.Find(planetNames[planetNumber]).transform;
+
+            if (newFocus != null)
+            {
+                SetFocus(newFocus);
+            } else
+            {
+                Debug.LogError("Planeta não encontrado com o número: " + planetNumber);
+            }
+        } else
+        {
+            Debug.LogError("Número de planeta inválido: " + planetNumber);
         }
     }
 
