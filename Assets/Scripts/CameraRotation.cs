@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     private float currentZoomDistance;
 
     private GameObject planetFocus;
+    GameController gameController;
 
     // Variáveis de foco
     public float followSpeed = 0.8f;
@@ -102,7 +103,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private void ChangeFocusByNumber(int planetNumber)
+    public void ChangeFocusByNumber(int planetNumber)
     {
         // Define os nomes dos planetas com base nos seus GameObjects
         string[] planetNames = {"Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
