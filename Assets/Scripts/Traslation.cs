@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Traslation : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Traslation : MonoBehaviour
 
     private Vector3 startPosition;
     private float orbitalRadius;
+    private bool isPaused = false;
 
     private void Start()
     {
@@ -16,12 +19,17 @@ public class Traslation : MonoBehaviour
     }
     private void Update()
     {
-        if(centerObject != null)
+        if (!isPaused)
         {
-            UpdateOrbit();
-        } else
-        {
-            Debug.LogError("Center object is not assigned to " + gameObject.name);
+            // Atualize o movimento dos planetas apenas se a simulação não estiver pausada.
+            if (centerObject != null)
+            {
+                UpdateOrbit();
+            }
+            else
+            {
+                Debug.LogError("Center object is not assigned to " + gameObject.name);
+            }
         }
     }
 
@@ -34,11 +42,23 @@ public class Traslation : MonoBehaviour
         }
     }
 
-    private void UpdateOrbit()
+    public void UpdateOrbit()
     {
-        Vector3 offsetFromCenter = transform.position - centerObject.position;
-        Quaternion rotation = Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0);
-        Vector3 newPosition = centerObject.position + rotation * (offsetFromCenter.normalized * orbitalRadius);
-        transform.position = newPosition;
+        
+            Vector3 offsetFromCenter = transform.position - centerObject.position;
+            Quaternion rotation = Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0);
+            Vector3 newPosition = centerObject.position + rotation * (offsetFromCenter.normalized * orbitalRadius);
+            transform.position = newPosition;
     }
+
+    public void PauseSimulation()
+    {
+        isPaused = true;
+    }
+
+    public void ResumeSimulation()
+    {
+        isPaused = false;
+    }
+
 }
