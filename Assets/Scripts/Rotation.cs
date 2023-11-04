@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
     public Vector3 rotationAxis = Vector3.up; // O eixo de rotação desejado
     public float rotationSpeed = 70.0f;
+
+    [SerializeField] private Toggle sel;
 
     private Transform planetAxis; // Referência ao objeto do cilindro representando o eixo
 
@@ -24,7 +26,12 @@ public class Rotation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Gire o planeta em torno do eixo desejado
-        transform.Rotate(rotationAxis, rotationSpeed * Time.fixedDeltaTime);
+        if (sel.isOn == true)
+        {
+            // Gire o planeta em torno do eixo desejado
+            transform.Rotate(rotationAxis, rotationSpeed * Time.fixedDeltaTime);
+        }
+      
     }
+
 }

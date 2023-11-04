@@ -11,7 +11,7 @@ public class Traslation : MonoBehaviour
 
     private Vector3 startPosition;
     private float orbitalRadius;
-    private bool isPaused = false;
+    [SerializeField] private Toggle sel;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class Traslation : MonoBehaviour
     }
     private void Update()
     {
-        if (!isPaused)
+        if (sel.isOn == true)
         {
             // Atualize o movimento dos planetas apenas se a simulação não estiver pausada.
             if (centerObject != null)
@@ -49,16 +49,6 @@ public class Traslation : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0);
             Vector3 newPosition = centerObject.position + rotation * (offsetFromCenter.normalized * orbitalRadius);
             transform.position = newPosition;
-    }
-
-    public void PauseSimulation()
-    {
-        isPaused = true;
-    }
-
-    public void ResumeSimulation()
-    {
-        isPaused = false;
     }
 
 }
