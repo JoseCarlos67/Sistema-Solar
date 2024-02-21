@@ -52,7 +52,3 @@
 *.prefab linguist-generated
 *.unity linguist-generated
 *.aar filter=lfs diff=lfs merge=lfs -text
-Stars filter=lfs diff=lfs merge=lfs -text
-Skybox/StarSkybox04/CubemapStars.cubemap filter=lfs diff=lfs merge=lfs -text
-Assets/Textures/Real filter=lfs diff=lfs merge=lfs -text
-CubemapStars.cubemap=lfs diff=lfs merge=lfs -text
