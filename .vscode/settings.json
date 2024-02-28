@@ -50,7 +50,33 @@
         "Obj/":true,
         "ProjectSettings/":true,
         "temp/":true,
-        "Temp/":true
+        "Temp/":true,
+
+        // Minhas configs
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/Library": true,
+        "**/Temp": true,
+        "**/obj": true,
+        "**/Build": true,
+        "**/Logs": true,
+        "**/userprefs.ini": true,
+        "**/Assembly-*.cs": false
     },
-    "dotnet.preferCSharpExtension": true
+
+    "search.exclude": { // Minhas configs
+        "**/Library": true,
+        "**/Temp": true,
+        "**/obj": true,
+        "**/Build": true,
+        "**/Logs": true
+    },
+    "files.watcherExclude": { // Minhas configs
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true
+    },
+
+    "dotnet.preferCSharpExtension": true,
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench"
 }

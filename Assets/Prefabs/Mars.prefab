@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6566062915079224919}
   - component: {fileID: 109400639899621761}
   - component: {fileID: 5075370023077516217}
+  - component: {fileID: 2053472898826925556}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Celestial
@@ -106,7 +107,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -271,6 +272,22 @@ MonoBehaviour:
   centerObject: {fileID: 0}
   orbitSpeed: 1.5
   sel: {fileID: 0}
+--- !u!114 &2053472898826925556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259491637431179381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 2
+  maxZoomDistance: 10
+  orbitSpeed: 0
+  celestial: {fileID: 5075370023077516217}
 --- !u!1 &7334540877137640952
 GameObject:
   m_ObjectHideFlags: 0
