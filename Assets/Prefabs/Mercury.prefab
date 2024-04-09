@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1501431679153154485}
   - component: {fileID: 4772899715689291718}
   - component: {fileID: 4831232383686297876}
+  - component: {fileID: 4019311580656794536}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Celestial
@@ -378,3 +379,19 @@ MonoBehaviour:
   centerObject: {fileID: 0}
   orbitSpeed: 5
   sel: {fileID: 0}
+--- !u!114 &4019311580656794536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842585665130619796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 10
+  maxZoomDistance: 20
+  orbitSpeed: 0
+  celestial: {fileID: 4831232383686297876}

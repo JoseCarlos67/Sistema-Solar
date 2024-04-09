@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,13 +18,13 @@ public class BtnStop : MonoBehaviour
         isPaused = !isPaused;
         if (isPaused)
         {
-            //Time.timeScale = 0; // Pausar a simulação
+            //Time.timeScale = 0; // Pausar a simulaï¿½ï¿½o
             StopAllCoroutines();
             traslation.StopAllCoroutines();
         }
         else
         {
-            Time.timeScale = 1;  // Rotomar a simulação
+            Time.timeScale = 1;  // Rotomar a simulaï¿½ï¿½o
         }
     }
 

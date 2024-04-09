@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6892537078666167768}
   - component: {fileID: 5103479614231020206}
   - component: {fileID: 1323655152566825743}
+  - component: {fileID: 3249255823968828232}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Celestial
@@ -271,6 +272,22 @@ MonoBehaviour:
   centerObject: {fileID: 0}
   orbitSpeed: 0.6
   sel: {fileID: 0}
+--- !u!114 &3249255823968828232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733058558659479648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 7
+  maxZoomDistance: 20
+  orbitSpeed: 0
+  celestial: {fileID: 1323655152566825743}
 --- !u!1 &8848819503415200497
 GameObject:
   m_ObjectHideFlags: 0

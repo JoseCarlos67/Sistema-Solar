@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1156836744583189975}
   - component: {fileID: 6453254897311912140}
   - component: {fileID: 1758134716832163395}
+  - component: {fileID: 568713753340417526}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Celestial
@@ -273,6 +274,22 @@ MonoBehaviour:
   centerObject: {fileID: 0}
   orbitSpeed: 0.8
   sel: {fileID: 0}
+--- !u!114 &568713753340417526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371354028972655502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 7
+  maxZoomDistance: 20
+  orbitSpeed: 0
+  celestial: {fileID: 1758134716832163395}
 --- !u!1 &7870797822517610608
 GameObject:
   m_ObjectHideFlags: 0

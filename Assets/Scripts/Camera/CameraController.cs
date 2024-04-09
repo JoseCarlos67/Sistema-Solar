@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -12,8 +11,7 @@ public class CameraController : MonoBehaviour
 	public float maxZoomDistance = 20.0f;
 	private float currentZoomDistance;
 
-	private GameObject planetFocus;
-	GameController gameController;
+	public GameObject planetFocus;
 
 	// Vari�veis de foco
 	public float followSpeed = 0.8f;
@@ -22,10 +20,17 @@ public class CameraController : MonoBehaviour
 	private Vector3 lastMousePosition;
 	private Vector3 initialOffset;
 	public Traslation planetTraslation;
+	
+	public static CameraController instanceCameraController;
+	
+	private void Awake() 
+	{
+		instanceCameraController = this;
+	}
 
 	private void Start()
 	{
-		targetToFollow = GameObject.Find("Sun").transform;
+		targetToFollow = GameObject.Find("Sol").transform;
 		planetTraslation = targetToFollow.GetComponent<Traslation>();
 		initialOffset = transform.position - targetToFollow.position;
 		currentZoomDistance = initialOffset.magnitude;
@@ -109,7 +114,7 @@ public class CameraController : MonoBehaviour
 	public void ChangeFocusByNumber(int planetNumber)
 	{
 		// Define os nomes dos planetas com base nos seus GameObjects
-		string[] planetNames = {"Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+		string[] planetNames = {"Sol", "Mercurio", "Venus", "Terra", "Marte", "Jupiter", "Saturno", "Urano", "Netuno"};
 
 		// Verifica se o n�mero do planeta est� dentro dos limites
 		if (planetNumber >= 0 && planetNumber <= planetNames.Length)

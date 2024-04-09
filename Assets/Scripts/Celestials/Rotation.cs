@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    public Vector3 rotationAxis = Vector3.up; // O eixo de rotação desejado
+    public Vector3 rotationAxis = Vector3.up; // O eixo de rotaï¿½ï¿½o desejado
     public float rotationSpeed = 70.0f;
 
     [SerializeField] private Toggle sel;
 
-    private Transform planetAxis; // Referência ao objeto do cilindro representando o eixo
+    private Transform planetAxis; // Referï¿½ncia ao objeto do cilindro representando o eixo
 
     private void Start()
     {

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +18,7 @@ public class Traslation : MonoBehaviour
     {
         if (sel.isOn == true)
         {
-            // Atualize o movimento dos planetas apenas se a simulação não estiver pausada.
+            // Atualize o movimento dos planetas apenas se a simulaï¿½ï¿½o nï¿½o estiver pausada.
             if (centerObject != null)
             {
                 UpdateOrbit();

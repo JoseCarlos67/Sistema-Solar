@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 109400639899621761}
   - component: {fileID: 5075370023077516217}
   - component: {fileID: 2053472898826925556}
+  - component: {fileID: 2176015712322523302}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Celestial
@@ -284,10 +285,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZoomDistance: 2
-  maxZoomDistance: 10
+  minZoomDistance: 10
+  maxZoomDistance: 20
   orbitSpeed: 0
   celestial: {fileID: 5075370023077516217}
+--- !u!114 &2176015712322523302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259491637431179381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f531b925771fc22b7a5d2810856761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFocus: 0
+  information: {fileID: 11400000, guid: afcd64a81bd5b86629ab575e377c3804, type: 2}
+  nameAstro: 
 --- !u!1 &7334540877137640952
 GameObject:
   m_ObjectHideFlags: 0

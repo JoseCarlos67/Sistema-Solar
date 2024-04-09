@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6572488196486808175}
   - component: {fileID: 8816145110776525977}
   - component: {fileID: 6495437576270534430}
+  - component: {fileID: 5042704412071320923}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Celestial
@@ -378,3 +379,19 @@ MonoBehaviour:
   centerObject: {fileID: 0}
   orbitSpeed: 3.5
   sel: {fileID: 0}
+--- !u!114 &5042704412071320923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837708882402488906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 10
+  maxZoomDistance: 20
+  orbitSpeed: 0
+  celestial: {fileID: 6495437576270534430}
