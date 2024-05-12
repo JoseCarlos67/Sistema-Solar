@@ -67,6 +67,8 @@
       "Assets/TextMesh Pro":true,
       "Assets/TutorialInfo":true,
       "Assets/UI":true,
+      "Assets/Images": true,
+      ".vscode/": true,
 
       // Minhas configs
       "**/.svn": true,

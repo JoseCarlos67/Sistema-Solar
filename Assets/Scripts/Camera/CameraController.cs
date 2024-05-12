@@ -21,11 +21,11 @@ public class CameraController : MonoBehaviour
 	private Vector3 initialOffset;
 	public Traslation planetTraslation;
 	
-	public static CameraController instanceCameraController;
+	public static CameraController instance;
 	
 	private void Awake() 
 	{
-		instanceCameraController = this;
+		instance = this;
 	}
 
 	private void Start()

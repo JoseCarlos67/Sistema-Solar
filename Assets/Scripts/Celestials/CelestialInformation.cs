@@ -1,51 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CelestialInformation : MonoBehaviour
 {
+	public string nameCelestial;
 	public bool cameraFocus;
-	public InformationSettings information;
-	[SerializeField] private string aboutText;
-	[SerializeField] private string nameAstro;
-	[SerializeField] private Toggle toggleSelected;
-
-	private void Start() 
+	
+	public InformationSettings informationSettings;
+	private List<string> informations = new();
+	public Toggle toggleSelected;
+	
+	void Start()
 	{
 		GetTexts();
 	}
-
+	
 	void Update()
 	{
-		ShowInformations();
-		if(toggleSelected.isOn == true && cameraFocus) 
+		ShowInformation();
+		if(Input.GetKeyDown(KeyCode.I) && cameraFocus)
 		{
-			InformationControl.instanceInformacionControl.ShowInformationInPanel(aboutText.ToString(), nameAstro);
-			Debug.Log("Cheguei aqui");
-		} else 
-		{
-			InformationControl.instanceInformacionControl.informationObj.SetActive(false);
+			InformationControl.instance.Speech(informations.ToArray());
 		}
 	}
 	
-	void GetTexts() 
-	{	
-		nameAstro = information.information[0].nameAstro;
-		for(int i = 0; i < information.information.Count; i++) 
-		{
-			aboutText = information.information[i].about.portuguese;
-			nameAstro = information.information[i].nameAstro;
-		}
-	}
-	
-	public void ShowInformations() 
+	public void GetTexts()
 	{
-		if (CameraController.instanceCameraController.targetToFollow.gameObject.name == nameAstro) 
+		for(int i = 0; i < informationSettings.informationCelestial.Count; i++)
+		{
+			informations.Add(informationSettings.informationCelestial[i].about.portuguese);
+		}
+	}
+	
+	public void ShowInformation()
+	{
+		if(CameraController.instance.targetToFollow.gameObject.name == nameCelestial)
 		{
 			cameraFocus = true;
-		} else 
+		} else
 		{
 			cameraFocus = false;
-			InformationControl.instanceInformacionControl.informationObj.SetActive(false);
 		}
 	}
 }

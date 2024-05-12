@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 6978826282533311174}
   - component: {fileID: 6890866936716262328}
   - component: {fileID: 2286843177589821850}
-  - component: {fileID: 643506246300962675}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Celestial
@@ -396,19 +395,3 @@ MonoBehaviour:
   maxZoomDistance: 60
   orbitSpeed: 0
   celestial: {fileID: 6890866936716262328}
---- !u!114 &643506246300962675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4215473733242361228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7f531b925771fc22b7a5d2810856761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraFocus: 0
-  information: {fileID: 11400000, guid: c77bae1fbbac10a13be891327fa57a04, type: 2}
-  nameAstro: 
-  toggleSelected: {fileID: 0}

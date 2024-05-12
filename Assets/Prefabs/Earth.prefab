@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 4401052468449861452}
   - component: {fileID: 8533911826758944107}
   - component: {fileID: 5996409135302257519}
-  - component: {fileID: 4643012407058141250}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Celestial
@@ -397,22 +396,6 @@ MonoBehaviour:
   maxZoomDistance: 20
   orbitSpeed: 0
   celestial: {fileID: 8533911826758944107}
---- !u!114 &4643012407058141250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8607435247706263778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7f531b925771fc22b7a5d2810856761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraFocus: 0
-  information: {fileID: 11400000, guid: c77bae1fbbac10a13be891327fa57a04, type: 2}
-  nameAstro: 
-  toggleSelected: {fileID: 0}
 --- !u!1001 &5813156398794764569
 PrefabInstance:
   m_ObjectHideFlags: 0
