@@ -6,12 +6,22 @@ using UnityEngine.UI;
 
 public class CelestialInformation : MonoBehaviour
 {
-	public string nameCelestial;
+	private string nameCelestial;
+	private string diameter;
+	private string composition;
+	private int position;
+	private float averageTemperature;
+	private float mass;
+	private string lifePresent;
+	private float translationSpeed;
+	private float rotationSpeed;
+	private int naturalSatellitesCount;
+
 	public bool cameraFocus;
 	
 	public InformationSettings informationSettings;
 	private List<string> informations = new();
-	public Toggle toggleSelected;
+
 	
 	void Start()
 	{
@@ -23,15 +33,25 @@ public class CelestialInformation : MonoBehaviour
 		ShowInformation();
 		if(Input.GetKeyDown(KeyCode.I) && cameraFocus)
 		{
-			InformationControl.instance.Speech(informations.ToArray());
+			InformationControl.instance.Speech(informations.ToArray(), nameCelestial, diameter, composition, position, averageTemperature, mass, lifePresent, translationSpeed, rotationSpeed, naturalSatellitesCount);
 		}
 	}
 	
 	public void GetTexts()
 	{
 		for(int i = 0; i < informationSettings.informationCelestial.Count; i++)
-		{
+		{	
+			nameCelestial = informationSettings.informationCelestial[i].name;
 			informations.Add(informationSettings.informationCelestial[i].about.portuguese);
+			diameter = informationSettings.informationCelestial[i].diameter;
+			composition = informationSettings.informationCelestial[i].composition;
+			position = informationSettings.informationCelestial[i].position;
+			averageTemperature = informationSettings.informationCelestial[i].averageTemperature;
+			mass = informationSettings.informationCelestial[i].mass;
+			lifePresent = informationSettings.informationCelestial[i].lifePresent;
+			translationSpeed = informationSettings.informationCelestial[i].translationSpeed;
+			rotationSpeed = informationSettings.informationCelestial[i].rotationSpeed;
+			naturalSatellitesCount = informationSettings.informationCelestial[i].naturalSatellitesCount;
 		}
 	}
 	

@@ -12,12 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1325aa331a240873ab3321cfa2dbb306, type: 3}
   m_Name: marte
   m_EditorClassIdentifier: 
-  nameCelestial: 
-  aboutCelestial: 
+  name: 
+  about: 
+  diameter: 
+  composition: 
+  position: 0
+  averageTemperature: 0
+  mass: 0
+  lifePresent: 
+  translationSpeed: 0
+  rotationSpeed: 0
+  naturalSatellitesCount: 0
   informationCelestial:
   - name: Marte
     about:
-      portuguese: "Marte \xE9 o quarto planeta no nossos sistema, e \xE9 conhecido
-        como o planeta vermelho."
+      portuguese: "Marte, frequentemente chamado de \"Planeta Vermelho\" devido \xE0
+        sua cor caracter\xEDstica, \xE9 o quarto planeta do Sistema Solar em ordem
+        de dist\xE2ncia do Sol. Com um di\xE2metro de aproximadamente 6.779 quil\xF4metros,
+        Marte \xE9 um dos planetas mais estudados por astr\xF4nomos e cientistas,
+        gra\xE7as ao seu potencial de ter abrigado vida no passado. Sua composi\xE7\xE3o
+        \xE9 rica em ferro, magn\xE9sio, sil\xEDcio e oxig\xEAnio."
       english: 
       spanish: 
+    diameter: 6779.0
+    composition: "Ferro, magn\xE9sio, sil\xEDcio e oxig\xEAnio"
+    position: 4
+    averageTemperature: -63
+    mass: 6.4171e+23
+    lifePresent: Sem vida
+    translationSpeed: 24.077
+    rotationSpeed: 868.22
+    naturalSatellitesCount: 2
