@@ -45,7 +45,7 @@ public class InformationControl : MonoBehaviour
 		
 	}
 		
-	public void Speech(string[] txt, string celestialName, string diameter, string composition, int position, float averageTemperature, float mass, string lifePresent, float translationSpeed, float rotationSpeed, int naturalSatellites)
+	public void Speech(string[] txt, string celestialName, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellites)
 	{
 		if (!isShowing)
 		{
@@ -55,13 +55,13 @@ public class InformationControl : MonoBehaviour
 			this.celestialNameTextField.text = celestialName;
 			this.diameter.text = diameter;
 			this.composition.text = composition;
-			this.position.text =  position.ToString();
-			this.averageTemperature.text = averageTemperature.ToString();
-			this.mass.text = mass.ToString();
+			this.position.text =  position;
+			this.averageTemperature.text = averageTemperature;
+			this.mass.text = mass;
 			this.lifePresent.text = lifePresent;
-			this.translationSpeed.text = translationSpeed.ToString();
-			this.rotationSpeed.text = rotationSpeed.ToString();
-			this.naturalSatellites.text = naturalSatellites.ToString();
+			this.translationSpeed.text = translationSpeed;
+			this.rotationSpeed.text = rotationSpeed;
+			this.naturalSatellites.text = naturalSatellites;
 
 			StartCoroutine(TypeInformation());
 			isShowing = true;

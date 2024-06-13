@@ -9,13 +9,13 @@ public class CelestialInformation : MonoBehaviour
 	private string nameCelestial;
 	private string diameter;
 	private string composition;
-	private int position;
-	private float averageTemperature;
-	private float mass;
+	private string position;
+	private string averageTemperature;
+	private string mass;
 	private string lifePresent;
-	private float translationSpeed;
-	private float rotationSpeed;
-	private int naturalSatellitesCount;
+	private string translationSpeed;
+	private string rotationSpeed;
+	private string naturalSatellitesCount;
 
 	public bool cameraFocus;
 	

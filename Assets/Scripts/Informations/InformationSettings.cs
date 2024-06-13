@@ -12,13 +12,13 @@ public class InformationSettings : ScriptableObject
 	public string about;
 	public string diameter;
 	public string composition;
-	public int position;
-	public float averageTemperature;
-	public float mass;
+	public string position;
+	public string averageTemperature;
+	public string mass;
 	public string lifePresent;
-	public float translationSpeed;
-	public float rotationSpeed;
-	public int naturalSatellitesCount;
+	public string translationSpeed;
+	public string rotationSpeed;
+	public string naturalSatellitesCount;
 	
 	public List<Informations> informationCelestial = new();
 }
@@ -30,13 +30,13 @@ public class Informations
 	public Languages about;
 	public string diameter;
 	public string composition;
-	public int position;
-	public float averageTemperature;
-	public float mass;
+	public string position;
+	public string averageTemperature;
+	public string mass;
 	public string lifePresent;
-	public float translationSpeed;
-	public float rotationSpeed;
-	public int naturalSatellitesCount;
+	public string translationSpeed;
+	public string rotationSpeed;
+	public string naturalSatellitesCount;
 }
 
 [System.Serializable]
@@ -83,12 +83,13 @@ public class Languages
 					informationSettings.about = "";
 					informationSettings.diameter = "";
 					informationSettings.composition = "";
-					informationSettings.position = 0;
-					informationSettings.averageTemperature = 0;
-					informationSettings.mass = 0;
-					informationSettings.lifePresent = "";informationSettings.translationSpeed = 0;
-					informationSettings.rotationSpeed = 0;
-					informationSettings.naturalSatellitesCount = 0;
+					informationSettings.position = "";
+					informationSettings.averageTemperature = "";
+					informationSettings.mass = "";
+					informationSettings.lifePresent = "";
+					informationSettings.translationSpeed = "";
+					informationSettings.rotationSpeed = "";
+					informationSettings.naturalSatellitesCount = "";
 				}
 			}
 		}

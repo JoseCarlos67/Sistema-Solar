@@ -3746,7 +3746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1548623787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4995,14 +4995,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5842585665130619796, guid: 0f2f662e1cd18724295a96e23d43d4fd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888470922769446825}
   m_SourcePrefab: {fileID: 100100000, guid: 0f2f662e1cd18724295a96e23d43d4fd, type: 3}
+--- !u!1 &1888470922769446814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5842585665130619796, guid: 0f2f662e1cd18724295a96e23d43d4fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1888470922769446813}
+  m_PrefabAsset: {fileID: 0}
 --- !u!96 &1888470922769446824 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 1501431679153154485, guid: 0f2f662e1cd18724295a96e23d43d4fd,
     type: 3}
   m_PrefabInstance: {fileID: 1888470922769446813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888470922769446825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888470922769446814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f531b925771fc22b7a5d2810856761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFocus: 0
+  informationSettings: {fileID: 11400000, guid: 3fd7f8c7f3ee3184e9c57edc594a39e2,
+    type: 2}
 --- !u!1001 &2774175558704949062
 PrefabInstance:
   m_ObjectHideFlags: 0
