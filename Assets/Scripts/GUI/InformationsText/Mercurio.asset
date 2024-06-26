@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1325aa331a240873ab3321cfa2dbb306, type: 3}
+  m_Name: Mercurio
+  m_EditorClassIdentifier: 
+  name: 
+  about: 
+  diameter: 
+  composition: 
+  position: 
+  averageTemperature: 
+  mass: 
+  lifePresent: 
+  translationSpeed: 
+  rotationSpeed: 
+  naturalSatellitesCount: 
+  informationCelestial:
+  - name: Mercurio
+    about:
+      portuguese: "Merc\xFArio orbita o Sol a uma velocidade estonteante, completando
+        uma volta em torno da estrela em apenas 88 dias terrestres. Essa proximidade
+        solar resulta em temperaturas extremas: durante o dia, a superf\xEDcie mercuriana
+        pode alcan\xE7ar at\xE9 430\xB0C, quente o suficiente para derreter chumbo!
+        J\xE1 \xE0 noite, sem a radia\xE7\xE3o solar direta, a temperatura despenca
+        para g\xE9lidos -180\xB0C."
+      english: 
+      spanish: 
+    diameter: "<color=#B17F2A>Di\xE2metro: </color> 4.879 km"
+    composition: '<color=#B17F2A>Composition: </color>'
+    position: "<color=#B17F2A>Posi\xE7\xE3o: </color> 1"
+    averageTemperature: " <color=#B17F2A>Temperatura M\xE9dia: </color>173\xB0C (dia)
+      e -427\xB0C (noite)"
+    mass: '<color=#B17F2A>Massa: </color> 3,30 x 10^23 kg'
+    lifePresent: '<color=#B17F2A>Vida: </color> 0'
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color> 47,87 km/s"
+    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color> 10,62 km/h"
+    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color> 0"

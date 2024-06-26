@@ -20,7 +20,8 @@ public class CelestialInformation : MonoBehaviour
 	public bool cameraFocus;
 	
 	public InformationSettings informationSettings;
-	private List<string> informations = new();
+	//private List<string> informations = new();
+	private string informations;
 
 	
 	void Start()
@@ -33,7 +34,7 @@ public class CelestialInformation : MonoBehaviour
 		ShowInformation();
 		if(Input.GetKeyDown(KeyCode.I) && cameraFocus)
 		{
-			InformationControl.instance.Speech(informations.ToArray(), nameCelestial, diameter, composition, position, averageTemperature, mass, lifePresent, translationSpeed, rotationSpeed, naturalSatellitesCount);
+			InformationControl.instance.Speech(informations, nameCelestial, diameter, composition, position, averageTemperature, mass, lifePresent, translationSpeed, rotationSpeed, naturalSatellitesCount);
 		}
 	}
 	
@@ -42,7 +43,7 @@ public class CelestialInformation : MonoBehaviour
 		for(int i = 0; i < informationSettings.informationCelestial.Count; i++)
 		{	
 			nameCelestial = informationSettings.informationCelestial[i].name;
-			informations.Add(informationSettings.informationCelestial[i].about.portuguese);
+			informations = informationSettings.informationCelestial[i].about.portuguese;
 			diameter = informationSettings.informationCelestial[i].diameter;
 			composition = informationSettings.informationCelestial[i].composition;
 			position = informationSettings.informationCelestial[i].position;

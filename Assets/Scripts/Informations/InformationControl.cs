@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,17 +9,17 @@ public class InformationControl : MonoBehaviour
 {
 	[Header("Components")]
 	public GameObject informationObject;
-	public Text aboutTextField;
-	public Text celestialNameTextField;
-	public Text diameter;
-	public Text composition;
-	public Text position;
-	public Text averageTemperature;
-	public Text mass;
-	public Text lifePresent;
-	public Text translationSpeed;
-	public Text rotationSpeed;
-	public Text naturalSatellites;
+	public TextMeshProUGUI aboutTextField;
+	public TextMeshProUGUI celestialNameTextField;
+	public TextMeshProUGUI composition;
+	public TextMeshProUGUI position;
+	public TextMeshProUGUI averageTemperature;
+	public TextMeshProUGUI mass;
+	public TextMeshProUGUI diameter;
+	public TextMeshProUGUI lifePresent;
+	public TextMeshProUGUI translationSpeed;
+	public TextMeshProUGUI rotationSpeed;
+	public TextMeshProUGUI naturalSatellites;
 	
 	[Header("Settings")]
 	public float typingSpeed;
@@ -45,14 +48,14 @@ public class InformationControl : MonoBehaviour
 		
 	}
 		
-	public void Speech(string[] txt, string celestialName, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellites)
+	public void Speech(string txt, string celestialName, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellites)
 	{
 		if (!isShowing)
 		{
 			informationObject.SetActive(true);
 
-			informations = txt;
-			this.celestialNameTextField.text = celestialName;
+			//informations = txt;
+			celestialNameTextField.text = celestialName;
 			this.diameter.text = diameter;
 			this.composition.text = composition;
 			this.position.text =  position;
@@ -62,30 +65,23 @@ public class InformationControl : MonoBehaviour
 			this.translationSpeed.text = translationSpeed;
 			this.rotationSpeed.text = rotationSpeed;
 			this.naturalSatellites.text = naturalSatellites;
-
-			StartCoroutine(TypeInformation());
+			this.aboutTextField.text = txt;
+			//StartCoroutine(TypeInformation());
 			isShowing = true;
 		}
 	}
 	
 	public void NextSentence()
 	{
-		if(aboutTextField.text == informations[index])
-		{
-			if(index < informations.Length - 1)
-			{
-				index++;
-				aboutTextField.text = "";
-				StartCoroutine(TypeInformation());
-			} else
-			{
-				aboutTextField.text = "";
-				index = 0;
-				informationObject.SetActive(false);
-				informations = null;
-				isShowing = false;
-			}
-		}
+		aboutTextField.text = "";
+		index = 0;
+		informationObject.SetActive(false);
+		informations = null;
+		isShowing = false;
 	}
-	
+
+    internal void Speech(List<string> informations, string nameCelestial, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellitesCount)
+    {
+        throw new NotImplementedException();
+    }
 }

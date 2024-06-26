@@ -20,7 +20,9 @@ public class CameraController : MonoBehaviour
 	private Vector3 lastMousePosition;
 	private Vector3 initialOffset;
 	public Traslation planetTraslation;
-	
+
+	public GameObject informationObject;
+
 	public static CameraController instance;
 	
 	private void Awake() 
@@ -48,6 +50,8 @@ public class CameraController : MonoBehaviour
 			if (Input.GetKeyDown(i.ToString()))
 			{
 				ChangeFocusByNumber(i);
+				InformationControl.instance.informationObject.SetActive(false);
+				InformationControl.instance.isShowing = false;
 			}
 		}
 	}

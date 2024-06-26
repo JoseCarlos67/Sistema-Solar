@@ -11,6 +11,7 @@
         "**/*.unityproj": true,
         "**/*.dll": true,
         "**/*.exe": true,
+        "**/.csproj": true,
         "**/*.pdf": true,
         "**/*.mid": true,
         "**/*.midi": true,
@@ -65,6 +66,7 @@
         "Assets/UI": true,
         "Assets/Images": true,
         ".vscode/": true,
+        ".vs/": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
@@ -74,7 +76,12 @@
         "**/Build": true,
         "**/Logs": true,
         "**/userprefs.ini": true,
-        "**/Assembly-*.cs": false
+        "**/Assembly-*.cs": true,
+        "**/Assembly-*.csproj": true,
+        "**/Unity.*.csproj": true,
+        "**/UnityEditor.*.csproj": true,
+        "**/UnityEngine.*.csproj": true,
+        "PPv2URPConverters.csproj": true
     },
     "search.exclude": {
         "**/Library": true,
