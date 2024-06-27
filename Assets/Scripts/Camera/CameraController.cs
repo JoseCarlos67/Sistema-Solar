@@ -50,8 +50,6 @@ public class CameraController : MonoBehaviour
 			if (Input.GetKeyDown(i.ToString()))
 			{
 				ChangeFocusByNumber(i);
-				InformationControl.instance.informationObject.SetActive(false);
-				InformationControl.instance.isShowing = false;
 			}
 		}
 	}
@@ -157,6 +155,8 @@ public class CameraController : MonoBehaviour
 		{
 			currentFocus = newFocus;
 			targetToFollow = newFocus;
+			InformationControl.instance.informationObject.SetActive(false);
+			InformationControl.instance.isShowing = false;
 			followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
 			maxZoomDistance = targetToFollow.GetComponent<CelestialBody>().MaxZoomDistance;
 			minZoomDistance = targetToFollow.GetComponent<CelestialBody>().MinZoomDistance;

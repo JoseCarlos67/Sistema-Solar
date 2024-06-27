@@ -1616,6 +1616,16 @@ PrefabInstance:
       objectReference: {fileID: 122205386}
     - target: {fileID: 6495437576270534430, guid: 84d418d9748bc7f4380bc7fd08670f20,
         type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.05996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495437576270534430, guid: 84d418d9748bc7f4380bc7fd08670f20,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.9982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495437576270534430, guid: 84d418d9748bc7f4380bc7fd08670f20,
+        type: 3}
       propertyPath: centerObject
       value: 
       objectReference: {fileID: 1687271790}
@@ -2119,6 +2129,16 @@ PrefabInstance:
       objectReference: {fileID: 122205386}
     - target: {fileID: 1758134716832163395, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
         type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.04362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758134716832163395, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.99905
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758134716832163395, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
+        type: 3}
       propertyPath: centerObject
       value: 
       objectReference: {fileID: 1687271790}
@@ -2140,12 +2160,12 @@ PrefabInstance:
     - target: {fileID: 6844054703901897334, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844054703901897334, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000000074073796
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 6844054703901897334, guid: 8c3314ca32e1e004297d7f7c3507d3ec,
         type: 3}
@@ -2613,6 +2633,16 @@ PrefabInstance:
       propertyPath: sel
       value: 
       objectReference: {fileID: 122205386}
+    - target: {fileID: 6225884525316855969, guid: 08271f7d438f8e048a2267b40ce089b4,
+        type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.03141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225884525316855969, guid: 08271f7d438f8e048a2267b40ce089b4,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.99951
+      objectReference: {fileID: 0}
     - target: {fileID: 6225884525316855969, guid: 08271f7d438f8e048a2267b40ce089b4,
         type: 3}
       propertyPath: centerObject
@@ -3289,6 +3319,16 @@ PrefabInstance:
       objectReference: {fileID: 122205386}
     - target: {fileID: 1323655152566825743, guid: e30363ad35b3f0641a7f2952dc746462,
         type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.01396
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323655152566825743, guid: e30363ad35b3f0641a7f2952dc746462,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323655152566825743, guid: e30363ad35b3f0641a7f2952dc746462,
+        type: 3}
       propertyPath: centerObject
       value: 
       objectReference: {fileID: 1687271790}
@@ -3888,6 +3928,16 @@ PrefabInstance:
       propertyPath: sel
       value: 
       objectReference: {fileID: 122205386}
+    - target: {fileID: 5075370023077516217, guid: 250050bc315c51b4692157aeeae7a5cc,
+        type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.03316
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075370023077516217, guid: 250050bc315c51b4692157aeeae7a5cc,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.99945
+      objectReference: {fileID: 0}
     - target: {fileID: 5075370023077516217, guid: 250050bc315c51b4692157aeeae7a5cc,
         type: 3}
       propertyPath: centerObject
@@ -5349,6 +5399,16 @@ PrefabInstance:
       objectReference: {fileID: 122205386}
     - target: {fileID: 6890866936716262328, guid: e3ceb30a9adff4f42be43f9feffcb2db,
         type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.02268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890866936716262328, guid: e3ceb30a9adff4f42be43f9feffcb2db,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.99974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890866936716262328, guid: e3ceb30a9adff4f42be43f9feffcb2db,
+        type: 3}
       propertyPath: centerObject
       value: 
       objectReference: {fileID: 1687271790}
@@ -5540,6 +5600,16 @@ PrefabInstance:
       propertyPath: sel
       value: 
       objectReference: {fileID: 122205386}
+    - target: {fileID: 4831232383686297876, guid: 0f2f662e1cd18724295a96e23d43d4fd,
+        type: 3}
+      propertyPath: orbitAxis.x
+      value: 0.12187
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831232383686297876, guid: 0f2f662e1cd18724295a96e23d43d4fd,
+        type: 3}
+      propertyPath: orbitAxis.y
+      value: 0.99255
+      objectReference: {fileID: 0}
     - target: {fileID: 4831232383686297876, guid: 0f2f662e1cd18724295a96e23d43d4fd,
         type: 3}
       propertyPath: centerObject
