@@ -9,7 +9,7 @@ public class Traslation : MonoBehaviour
 
     // private Vector3 startPosition; Utilizar para resetar o translation
     private float orbitalRadius;
-    [SerializeField] private Toggle sel;
+    [SerializeField] public Toggle sel;
 
     private void Start()
     {
@@ -24,10 +24,6 @@ public class Traslation : MonoBehaviour
             if (centerObject != null)
             {
                 UpdateOrbit();
-            }
-            else
-            {
-                Debug.LogError("Center object is not assigned to " + gameObject.name);
             }
         }
     }
@@ -44,7 +40,6 @@ public class Traslation : MonoBehaviour
     public void UpdateOrbit()
     {
         Vector3 offsetFromCenter = transform.position - centerObject.position;
-        // Quaternion rotation = Quaternion.Euler(0, orbitSpeed * Time.deltaTime, 0);
         Quaternion rotation = Quaternion.AngleAxis(orbitSpeed * Time.deltaTime, orbitAxis);
         Vector3 newPosition = centerObject.position + rotation * (offsetFromCenter.normalized * orbitalRadius);
         transform.position = newPosition;

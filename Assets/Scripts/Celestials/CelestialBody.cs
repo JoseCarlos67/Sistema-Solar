@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CelestialBody : MonoBehaviour
@@ -6,7 +5,7 @@ public class CelestialBody : MonoBehaviour
 	[SerializeField] private float minZoomDistance;
 	[SerializeField] private float maxZoomDistance;
 	[SerializeField] private float orbitSpeed;
-	[SerializeField] private Traslation celestial;
+	[SerializeField] private Traslation? celestial;
 	public bool isFocus;
 	public string nameCelestial;
 	

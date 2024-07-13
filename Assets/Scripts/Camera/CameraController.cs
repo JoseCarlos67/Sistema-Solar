@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
 	public GameObject planetFocus;
 
 	// Vari�veis de foco
-	public float followSpeed = 0.8f;
+	public float followSpeed = 10;
 	public Transform targetToFollow;
 	private Transform currentFocus;
 	private Vector3 lastMousePosition;
@@ -100,7 +100,7 @@ public class CameraController : MonoBehaviour
 					if (planetTraslation != null)
 					{
 						//followSpeed = planetTraslation.orbitSpeed;
-						followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
+						// followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
 						maxZoomDistance = targetToFollow.GetComponent<CelestialBody>().MaxZoomDistance;
 						minZoomDistance = targetToFollow.GetComponent<CelestialBody>().MinZoomDistance;
 					}
@@ -157,7 +157,7 @@ public class CameraController : MonoBehaviour
 			targetToFollow = newFocus;
 			InformationControl.instance.informationObject.SetActive(false);
 			InformationControl.instance.isShowing = false;
-			followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
+			// followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
 			maxZoomDistance = targetToFollow.GetComponent<CelestialBody>().MaxZoomDistance;
 			minZoomDistance = targetToFollow.GetComponent<CelestialBody>().MinZoomDistance;
 		}
