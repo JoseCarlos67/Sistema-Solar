@@ -25,7 +25,7 @@ public class CelestialBody : MonoBehaviour
 	
 	public void IsFocus()
 	{
-		string nameCelestialFocus = CameraController.instance.targetToFollow.name;
+		string nameCelestialFocus = CameraController.instance.currentTarget.name;
 		
 		if(nameCelestial == nameCelestialFocus)
 		{

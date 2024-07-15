@@ -58,7 +58,7 @@ public class CelestialInformation : MonoBehaviour
 	
 	public void ShowInformation()
 	{
-		if(CameraController.instance.targetToFollow.gameObject.name == nameCelestial)
+		if(CameraController.instance.currentTarget.gameObject.name == nameCelestial)
 		{
 			cameraFocus = true;
 		} else

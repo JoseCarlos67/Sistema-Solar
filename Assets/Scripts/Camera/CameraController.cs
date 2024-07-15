@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
 
 	// Vari�veis de foco
 	public float followSpeed = 10;
-	public Transform targetToFollow;
+	public Transform currentTarget;
 	private Transform currentFocus;
 	private Vector3 lastMousePosition;
 	private Vector3 initialOffset;
@@ -24,7 +24,9 @@ public class CameraController : MonoBehaviour
 	public GameObject informationObject;
 
 	public static CameraController instance;
-	
+
+	private CameraRotationController rotationController;
+
 	private void Awake() 
 	{
 		instance = this;
@@ -32,9 +34,10 @@ public class CameraController : MonoBehaviour
 
 	private void Start()
 	{
-		targetToFollow = GameObject.Find("Sol").transform;
-		planetTraslation = targetToFollow.GetComponent<Traslation>();
-		initialOffset = transform.position - targetToFollow.position;
+		ConfigureCamera();
+		currentTarget = GameObject.Find("Sol").transform;
+		planetTraslation = currentTarget.GetComponent<Traslation>();
+		initialOffset = transform.position - currentTarget.position;
 		currentZoomDistance = initialOffset.magnitude;
 	}
 
@@ -54,6 +57,14 @@ public class CameraController : MonoBehaviour
 		}
 	}
 
+	private void ConfigureCamera()
+	{
+		currentTarget = GameObject.Find("Sol").transform;
+		planetTraslation = currentTarget.GetComponent <Traslation>();
+		initialOffset = transform.position - currentTarget.position;
+		currentZoomDistance = initialOffset.magnitude;
+	}
+
 	private void HandleRotation()
 	{
 		if (Input.GetMouseButtonDown(0))
@@ -64,8 +75,8 @@ public class CameraController : MonoBehaviour
 		if (Input.GetMouseButton(0))
 		{
 			Vector3 delta = Input.mousePosition - lastMousePosition;
-			transform.RotateAround(targetToFollow.position, Vector3.up, delta.x * rotationSpeed * Time.deltaTime);
-			transform.RotateAround(targetToFollow.position, transform.right, -delta.y * rotationSpeed * Time.deltaTime);
+			transform.RotateAround(currentTarget.position, Vector3.up, delta.x * rotationSpeed * Time.deltaTime);
+			transform.RotateAround(currentTarget.position, transform.right, -delta.y * rotationSpeed * Time.deltaTime);
 			lastMousePosition = Input.mousePosition;
 		}
 	}
@@ -75,7 +86,7 @@ public class CameraController : MonoBehaviour
 		float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
 		currentZoomDistance = Mathf.Clamp(currentZoomDistance - zoomAmount, minZoomDistance, maxZoomDistance);
 
-		Vector3 desiredPosition = targetToFollow.position - transform.forward * currentZoomDistance;
+		Vector3 desiredPosition = currentTarget.position - transform.forward * currentZoomDistance;
 		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
 		transform.position = smoothedPosition;
 	}
@@ -96,19 +107,30 @@ public class CameraController : MonoBehaviour
 					SetFocus(hitTransform);
 
 					// Atualize explicitamente a vari�vel planetTraslation
-					planetTraslation = targetToFollow.GetComponent<Traslation>();
+					planetTraslation = currentTarget.GetComponent<Traslation>();
 					if (planetTraslation != null)
 					{
 						//followSpeed = planetTraslation.orbitSpeed;
 						// followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
-						maxZoomDistance = targetToFollow.GetComponent<CelestialBody>().MaxZoomDistance;
-						minZoomDistance = targetToFollow.GetComponent<CelestialBody>().MinZoomDistance;
+						maxZoomDistance = currentTarget.GetComponent<CelestialBody>().MaxZoomDistance;
+						minZoomDistance = currentTarget.GetComponent<CelestialBody>().MinZoomDistance;
 					}
 					else
 					{
 						Debug.LogError("O planeta n�o tem o componente Traslation.");
 					}
 				}
+			}
+		}
+	}
+
+	private void CheckNumberKeyInput()
+	{
+		for(int i = 0; i <= 8; i++)
+		{
+			if(Input.GetKeyDown(i.ToString()))
+			{
+				ChangeFocusByNumber(i);
 			}
 		}
 	}
@@ -138,15 +160,15 @@ public class CameraController : MonoBehaviour
 
 	public void FocusAndFollow(Transform target)
 	{
-		targetToFollow = target;
-		lastMousePosition = Input.mousePosition;
-		initialOffset = transform.position - targetToFollow.position;
+		currentTarget = target;
+		rotationController = gameObject.AddComponent<CameraRotationController>();
+		initialOffset = transform.position - currentTarget.position;
 		currentZoomDistance = initialOffset.magnitude;
 	}
 
 	public void StopFollowing()
 	{
-		targetToFollow = null;
+		currentTarget = null;
 	}
 
 	private void SetFocus(Transform newFocus)
@@ -154,12 +176,12 @@ public class CameraController : MonoBehaviour
 		if (newFocus != currentFocus)
 		{
 			currentFocus = newFocus;
-			targetToFollow = newFocus;
+			currentTarget = newFocus;
+			rotationController = new CameraRotationController(rotationSpeed, currentTarget);
 			InformationControl.instance.informationObject.SetActive(false);
 			InformationControl.instance.isShowing = false;
-			// followSpeed = 0.2f + targetToFollow.GetComponent<Traslation>().orbitSpeed;
-			maxZoomDistance = targetToFollow.GetComponent<CelestialBody>().MaxZoomDistance;
-			minZoomDistance = targetToFollow.GetComponent<CelestialBody>().MinZoomDistance;
+			maxZoomDistance = currentTarget.GetComponent<CelestialBody>().MaxZoomDistance;
+			minZoomDistance = currentTarget.GetComponent<CelestialBody>().MinZoomDistance;
 		}
 	}
 }
