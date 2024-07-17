@@ -1198,13 +1198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7c3801fb34ed646875fe6f46912545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
   zoomSpeed: 5000
   minZoomDistance: 10
   maxZoomDistance: 60
   planetFocus: {fileID: 0}
   followSpeed: 10
-  targetToFollow: {fileID: 1349997973}
+  currentTarget: {fileID: 0}
   planetTraslation: {fileID: 0}
   informationObject: {fileID: 1548623786}
 --- !u!1 &351272753
@@ -4296,12 +4295,6 @@ GameObject:
 --- !u!96 &1349997963 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 6566062915079224919, guid: 250050bc315c51b4692157aeeae7a5cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1349997952}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1349997973 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8640324729416504097, guid: 250050bc315c51b4692157aeeae7a5cc,
     type: 3}
   m_PrefabInstance: {fileID: 1349997952}
   m_PrefabAsset: {fileID: 0}

@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class CameraRotationController : MonoBehaviour
 {
-    private float rotationSpeed;
+    private float rotationSpeed = 5.0f;
     public Transform targetToFollow;
     public Vector3 lastMousePosition;
 
-    public CameraRotationController(float rotationSpeed,Transform targetToFollow)
+    public CameraRotationController(Transform targetToFollow)
     {
-        this.rotationSpeed = rotationSpeed;
         this.targetToFollow = targetToFollow;
     }
 
