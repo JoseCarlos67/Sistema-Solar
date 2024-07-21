@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -14,6 +15,7 @@ public class CameraController : MonoBehaviour
 	public float followSpeed = 10;
 	public Transform currentTarget;
 	private Transform currentFocus;
+	public String nameCurrentFocus;
 	private Vector3 initialOffset;
 	public Traslation planetTraslation;
 
@@ -50,16 +52,6 @@ public class CameraController : MonoBehaviour
 		planetTraslation = currentTarget.GetComponent<Traslation>();
 		initialOffset = transform.position - currentTarget.position;
 		currentZoomDistance = initialOffset.magnitude;
-	}
-
-	private void HandleZoom()
-	{
-		float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
-		currentZoomDistance = Mathf.Clamp(currentZoomDistance - zoomAmount, minZoomDistance, maxZoomDistance);
-
-		Vector3 desiredPosition = currentTarget.position - transform.forward * currentZoomDistance;
-		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
-		transform.position = smoothedPosition;
 	}
 
 	private void HandleFocus()
@@ -139,6 +131,7 @@ public class CameraController : MonoBehaviour
 		if (newFocus != currentFocus)
 		{
 			currentFocus = newFocus;
+			nameCurrentFocus = currentFocus.name; 
 			currentTarget = newFocus;
 			rotationController = new CameraRotationController(currentTarget);
 			cameraZoomController = new CameraZoomController(currentTarget, zoomSpeed, minZoomDistance, maxZoomDistance, followSpeed);

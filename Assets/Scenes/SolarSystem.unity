@@ -1204,6 +1204,7 @@ MonoBehaviour:
   planetFocus: {fileID: 0}
   followSpeed: 10
   currentTarget: {fileID: 0}
+  nameCurrentFocus: 
   planetTraslation: {fileID: 0}
   informationObject: {fileID: 1548623786}
 --- !u!1 &351272753
@@ -6364,8 +6365,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2558577079528633842, guid: c5f8ba15c44636f4eaf455bf7e69d466,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2774175558704949064}
   m_SourcePrefab: {fileID: 100100000, guid: c5f8ba15c44636f4eaf455bf7e69d466, type: 3}
+--- !u!1 &2774175558704949063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2558577079528633842, guid: c5f8ba15c44636f4eaf455bf7e69d466,
+    type: 3}
+  m_PrefabInstance: {fileID: 2774175558704949062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2774175558704949064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774175558704949063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d127325bf32a8a478b6e6fb2e7d4a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change: 10000
+  original: 64766
+  pointLight: {fileID: 1745513792}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
