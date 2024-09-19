@@ -49,6 +49,8 @@ public class CameraController : MonoBehaviour
 	private void ConfigureCamera()
 	{
 		currentTarget = GameObject.Find("Sol").transform;
+		maxZoomDistance = currentTarget.GetComponent<CelestialBody>().MaxZoomDistance;
+		minZoomDistance = currentTarget.GetComponent<CelestialBody>().MinZoomDistance;
 		planetTraslation = currentTarget.GetComponent<Traslation>();
 		initialOffset = transform.position - currentTarget.position;
 		currentZoomDistance = initialOffset.magnitude;

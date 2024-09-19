@@ -96,5 +96,7 @@
     },
     "dotnet.preferCSharpExtension": true,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-    "dotnet.defaultSolution": "Sistema-Solar.sln"
+    "dotnet.defaultSolution": "Sistema-Solar.sln",
+    "editor.suggest.showReferences": true,
+    "editor.codeLens": false
 }

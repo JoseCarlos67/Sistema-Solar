@@ -1426,7 +1426,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &373207120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,6 +2235,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &866915745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490023591386490415, guid: c5f8ba15c44636f4eaf455bf7e69d466,
+    type: 3}
+  m_PrefabInstance: {fileID: 2774175558704949062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &870466327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2717,7 +2723,7 @@ PrefabInstance:
     - target: {fileID: 934109002868786325, guid: 08271f7d438f8e048a2267b40ce089b4,
         type: 3}
       propertyPath: minZoomDistance
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1598757611260266042, guid: 08271f7d438f8e048a2267b40ce089b4,
         type: 3}
@@ -3596,7 +3602,7 @@ PrefabInstance:
     - target: {fileID: 3249255823968828232, guid: e30363ad35b3f0641a7f2952dc746462,
         type: 3}
       propertyPath: minZoomDistance
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4733058558659479648, guid: e30363ad35b3f0641a7f2952dc746462,
         type: 3}
@@ -4181,7 +4187,7 @@ PrefabInstance:
     - target: {fileID: 2053472898826925556, guid: 250050bc315c51b4692157aeeae7a5cc,
         type: 3}
       propertyPath: minZoomDistance
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2176015712322523302, guid: 250050bc315c51b4692157aeeae7a5cc,
         type: 3}
@@ -4575,6 +4581,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2774175558704949062}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1687271795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866915745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70537af5dcd6872a796a667ab638e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZoomDistance: 60
+  maxZoomDistance: 900
+  orbitSpeed: 0
+  celestial: {fileID: 0}
+  isFocus: 0
+  nameCelestial: 
+--- !u!114 &1687271796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866915745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f531b925771fc22b7a5d2810856761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFocus: 0
+  informationSettings: {fileID: 0}
 --- !u!1 &1700949374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6837708882402488906, guid: 84d418d9748bc7f4380bc7fd08670f20,
@@ -5909,6 +5947,11 @@ PrefabInstance:
       propertyPath: maxZoomDistance
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 2286843177589821850, guid: e3ceb30a9adff4f42be43f9feffcb2db,
+        type: 3}
+      propertyPath: minZoomDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4215473733242361228, guid: e3ceb30a9adff4f42be43f9feffcb2db,
         type: 3}
       propertyPath: m_Name
@@ -6143,7 +6186,7 @@ PrefabInstance:
     - target: {fileID: 4019311580656794536, guid: 0f2f662e1cd18724295a96e23d43d4fd,
         type: 3}
       propertyPath: minZoomDistance
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4772899715689291718, guid: 0f2f662e1cd18724295a96e23d43d4fd,
         type: 3}
@@ -6366,6 +6409,14 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1490023591386490415, guid: c5f8ba15c44636f4eaf455bf7e69d466,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1687271796}
+    - targetCorrespondingSourceObject: {fileID: 1490023591386490415, guid: c5f8ba15c44636f4eaf455bf7e69d466,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1687271795}
     - targetCorrespondingSourceObject: {fileID: 2558577079528633842, guid: c5f8ba15c44636f4eaf455bf7e69d466,
         type: 3}
       insertIndex: -1
