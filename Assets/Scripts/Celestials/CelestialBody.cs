@@ -12,11 +12,6 @@ public class CelestialBody : MonoBehaviour
 	public float MinZoomDistance { get => minZoomDistance; set => minZoomDistance = value; }
 	public float MaxZoomDistance {	get => maxZoomDistance; set => maxZoomDistance = value; }
 	public float OrbitSpeed { get => orbitSpeed; set => orbitSpeed = value; }
-
-	public void Awake()
-	{
-		orbitSpeed = celestial.GetComponent<Traslation>().orbitSpeed;
-	}
 	
 	public void Update()
 	{

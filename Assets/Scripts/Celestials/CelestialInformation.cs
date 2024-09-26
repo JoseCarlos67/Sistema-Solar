@@ -8,7 +8,7 @@ public class CelestialInformation : MonoBehaviour
 {
 	private string nameCelestial;
 	private string diameter;
-	private string composition;
+	//private string? composition;
 	private string position;
 	private string averageTemperature;
 	private string mass;
@@ -34,7 +34,7 @@ public class CelestialInformation : MonoBehaviour
 		ShowInformation();
 		if(Input.GetKeyDown(KeyCode.I) && cameraFocus)
 		{
-			InformationControl.instance.Speech(informations, nameCelestial, diameter, composition, position, averageTemperature, mass, lifePresent, translationSpeed, rotationSpeed, naturalSatellitesCount);
+			InformationControl.instance.Speech(informations, nameCelestial, diameter, position, averageTemperature, mass, lifePresent, translationSpeed, rotationSpeed, naturalSatellitesCount);
 		}
 	}
 	
@@ -45,7 +45,7 @@ public class CelestialInformation : MonoBehaviour
 			nameCelestial = informationSettings.informationCelestial[i].name;
 			informations = informationSettings.informationCelestial[i].about.portuguese;
 			diameter = informationSettings.informationCelestial[i].diameter;
-			composition = informationSettings.informationCelestial[i].composition;
+			//composition = informationSettings.informationCelestial[i].composition;
 			position = informationSettings.informationCelestial[i].position;
 			averageTemperature = informationSettings.informationCelestial[i].averageTemperature;
 			mass = informationSettings.informationCelestial[i].mass;

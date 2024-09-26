@@ -32,7 +32,7 @@ public class Traslation : MonoBehaviour
     {
         if(centerObject != null)
         {
-            //startPosition = transform.position;
+           // startPosition = transform.position;
             orbitalRadius = Vector3.Distance(centerObject.position, transform.position);
         }
     }

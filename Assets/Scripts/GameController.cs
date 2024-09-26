@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
             case 6: camera.ChangeFocusByNumber(6); break;
             case 7: camera.ChangeFocusByNumber(7); break;
             case 8: camera.ChangeFocusByNumber(8); break;
+            case 9: camera.ChangeFocusByNumber(9); break;
         }
     }
 }

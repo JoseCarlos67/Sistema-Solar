@@ -24,17 +24,21 @@ MonoBehaviour:
   rotationSpeed: 
   naturalSatellitesCount: 
   informationCelestial:
-  - name: Jupiter
+  - name: "J\xFApiter"
     about:
-      portuguese: --
+      portuguese: "J\xFApiter \xE9 o maior planeta do Sistema Solar, tanto em di\xE2metro
+        quanto em massa, e \xE9 o quinto mais pr\xF3ximo do Sol. Possui menos de
+        um mil\xE9simo da massa solar, contudo tem 2,5 vezes a massa de todos os
+        outros planetas em conjunto. \xC9 um planeta gasoso, junto com Saturno, Urano
+        e Netuno."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>142.984 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>139.820 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>5"
-    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-145\xB0C"
+    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-110\xB0C"
     mass: "<color=#B17F2A>Massa: </color>1,898x10\xB2\u2077 kg"
     lifePresent: '<color=#B17F2A>Vida: </color>Nenhuma'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>47.400 km/h"
-    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>45.000 km/h"
-    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>79"
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>47.160 km/h"
+    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>47.000 km/h"
+    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>70"

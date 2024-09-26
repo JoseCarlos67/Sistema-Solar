@@ -33,12 +33,12 @@ MonoBehaviour:
         montanhas, cheias de vulc\xF5es."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>10.820 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>12.104 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>2"
-    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>462\xB0C"
-    mass: '<color=#B17F2A>Massa: </color>4,87 x 10^24 kg'
+    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>460\xB0C"
+    mass: '<color=#B17F2A>Massa: </color>4,86 x 10^24 kg'
     lifePresent: '<color=#B17F2A>Vida: </color>0'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>35,02 km/s"
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>126 km/s"
     rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>6,52 km/h "
-    naturalSatellitesCount: "<color=#B17F2A>Rota\xE7\xE3o: </color>0"
+    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>0"

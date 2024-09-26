@@ -26,15 +26,18 @@ MonoBehaviour:
   informationCelestial:
   - name: Saturno
     about:
-      portuguese: --
+      portuguese: "Saturno \xE9 o sexto planeta a partir do Sol e o segundo maior
+        do Sistema Solar atr\xE1s de J\xFApiter. Pertencente ao grupo dos gigantes
+        gasosos, possui cerca de 95 massas terrestres e orbita a uma dist\xE2ncia
+        m\xE9dia de 9,5 unidades astron\xF4micas."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>120.536 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>116.460 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>6"
     averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-178\xB0C"
-    mass: "<color=#B17F2A>Massa: </color>568.319x10\xB2\xB3 kg"
+    mass: "<color=#B17F2A>Massa: </color>5,683 \xD7 10^26 kg"
     lifePresent: '<color=#B17F2A>Vida: </color>Nenhuma'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>35.000 km/h"
-    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>33.600 km/h"
-    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>82"
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>9,6 km/h"
+    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>34,7 km/h"
+    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>145"

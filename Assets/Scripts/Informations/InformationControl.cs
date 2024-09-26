@@ -11,7 +11,7 @@ public class InformationControl : MonoBehaviour
 	public GameObject informationObject;
 	public TextMeshProUGUI aboutTextField;
 	public TextMeshProUGUI celestialNameTextField;
-	public TextMeshProUGUI composition;
+	//public TextMeshProUGUI composition;
 	public TextMeshProUGUI position;
 	public TextMeshProUGUI averageTemperature;
 	public TextMeshProUGUI mass;
@@ -48,7 +48,7 @@ public class InformationControl : MonoBehaviour
 		
 	}
 		
-	public void Speech(string txt, string celestialName, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellites)
+	public void Speech(string txt, string celestialName, string diameter, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellites)
 	{
 		if (!isShowing)
 		{
@@ -57,7 +57,7 @@ public class InformationControl : MonoBehaviour
 			//informations = txt;
 			celestialNameTextField.text = celestialName;
 			this.diameter.text = diameter;
-			this.composition.text = composition;
+		//	this.composition.text = composition;
 			this.position.text =  position;
 			this.averageTemperature.text = averageTemperature;
 			this.mass.text = mass;
@@ -80,7 +80,7 @@ public class InformationControl : MonoBehaviour
 		isShowing = false;
 	}
 
-    internal void Speech(List<string> informations, string nameCelestial, string diameter, string composition, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellitesCount)
+    internal void Speech(List<string> informations, string nameCelestial, string diameter, string position, string averageTemperature, string mass, string lifePresent, string translationSpeed, string rotationSpeed, string naturalSatellitesCount)
     {
         throw new NotImplementedException();
     }

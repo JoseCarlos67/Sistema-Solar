@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1325aa331a240873ab3321cfa2dbb306, type: 3}
+  m_Name: Sol
+  m_EditorClassIdentifier: 
+  name: Sol
+  about: "O Sol \xE9 uma estrela an\xE3 amarela que os demais corpos celestes do
+    Sistema Solar orbitam. Ele \xE9 formado por gases e n\xE3o disp\xF5e de nenhuma
+    superf\xEDcie s\xF3lida. A maior parte do Sol \xE9 composta pelos gases h\xE9lio
+    e hidrog\xEAnio, n\xE3o havendo superf\xEDcies s\xF3lidas. S\xE3o, ao todo, seis
+    camadas que formam esse astro, desde o n\xFAcleo, no seu interior, at\xE9 a coroa,
+    camada mais externa. O Sol \xE9 uma fonte prim\xE1ria de calor e energia, sendo
+    de fundamental import\xE2ncia para a manuten\xE7\xE3o da vida no planeta Terra."
+  diameter: "<color=#B17F2A>Di\xE2metro: </color>1.392.700 km"
+  composition: 
+  position: 
+  averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>5.772 K"
+  mass: '<color=#B17F2A>Massa: </color>1,98 x 10^31 kg'
+  lifePresent: 
+  translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>720.000 km/h"
+  rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>7189,2 km/h"
+  naturalSatellitesCount: 
+  informationCelestial: []

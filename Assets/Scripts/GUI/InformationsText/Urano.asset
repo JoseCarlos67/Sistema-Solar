@@ -26,15 +26,19 @@ MonoBehaviour:
   informationCelestial:
   - name: Urano
     about:
-      portuguese: --
+      portuguese: "Urano \xE9 um dos quatro planetas gasosos do Sistema Solar. Ele
+        \xE9 o terceiro maior planeta desse sistema e apresenta uma composi\xE7\xE3o
+        de gases como o hidrog\xEAnio e o h\xE9lio. \xC9 um planeta ainda pouco explorado,
+        em raz\xE3o da sua dist\xE2ncia em rela\xE7\xE3o \xE0 Terra e tamb\xE9m das
+        dificuldades t\xE9cnicas de explora\xE7\xE3o de sua superf\xEDcie."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>51.118 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>50.724 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>7"
     averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-224\xB0C"
-    mass: "<color=#B17F2A>Massa: </color>9,69x10\xB2\u2075 kg"
+    mass: "<color=#B17F2A>Massa: </color>8,69x10\xB2\u2075 kg"
     lifePresent: '<color=#B17F2A>Vida: </color>Nenhuma'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>24.800 km/h"
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>24,4 km/h"
     rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>14.794 km/h"
-    naturalSatellitesCount: "<color=#B17F2A>Rota\xE7\xE3o: </color>27"
+    naturalSatellitesCount: "<color=#B17F2A>Rota\xE7\xE3o: </color>28"

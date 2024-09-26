@@ -26,14 +26,18 @@ MonoBehaviour:
   informationCelestial:
   - name: Netuno
     about:
-      portuguese: --
+      portuguese: "Netuno ou Neptuno \xE9 o oitavo planeta do Sistema Solar, o \xFAltimo
+        a partir do Sol desde a reclassifica\xE7\xE3o de Plut\xE3o para a categoria
+        de planeta an\xE3o, em 2006. Pertencente ao grupo dos gigantes gasosos, possui
+        um tamanho ligeiramente menor que o de Urano, mas maior massa, equivalente
+        a 17 massas terrestres."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>49.528 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>49.244 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>8"
     averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-218\xB0C"
-    mass: "<color=#B17F2A>Massa: </color>1,024x10\xB2\u2076"
+    mass: '<color=#B17F2A>Massa: </color>1,024x10^26'
     lifePresent: '<color=#B17F2A>Vida: </color>Nenhuma'
     translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>19.500 km/h"
     rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>16,08 km/h"

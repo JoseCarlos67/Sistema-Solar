@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
 
 	private void ConfigureCamera()
 	{
-		currentTarget = GameObject.Find("Sol").transform;
+		currentTarget = GameObject.Find("Sistema Solar").transform;
 		maxZoomDistance = currentTarget.GetComponent<CelestialBody>().MaxZoomDistance;
 		minZoomDistance = currentTarget.GetComponent<CelestialBody>().MinZoomDistance;
 		planetTraslation = currentTarget.GetComponent<Traslation>();
@@ -89,7 +89,7 @@ public class CameraController : MonoBehaviour
 
 	private void CheckNumberKeyInput()
 	{
-		for (int i = 0; i <= 8; i++)
+		for (int i = 0; i <= 9; i++)
 		{
 			if (Input.GetKeyDown(i.ToString()))
 			{
@@ -101,7 +101,7 @@ public class CameraController : MonoBehaviour
 	public void ChangeFocusByNumber(int planetNumber)
 	{
 		// Define os nomes dos planetas com base nos seus GameObjects
-		string[] planetNames = { "Sol", "Mercurio", "Venus", "Terra", "Marte", "Jupiter", "Saturno", "Urano", "Netuno" };
+		string[] planetNames = { "Sol", "Mercurio", "Venus", "Terra", "Marte", "Júpiter", "Saturno", "Urano", "Netuno", "Sistema Solar" };
 
 		// Verifica se o número do planeta está dentro dos limites
 		if (planetNumber >= 0 && planetNumber < planetNames.Length)

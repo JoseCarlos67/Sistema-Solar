@@ -12,7 +12,7 @@ public class Rotation : MonoBehaviour
     {
         if (sel.isOn == true)
         {
-            // Gire o planeta em torno do eixo desejado
+            // Gira o planeta em torno do eixo desejado
             transform.Rotate(rotationAxis, rotationSpeed * Time.fixedDeltaTime);
         }
     }

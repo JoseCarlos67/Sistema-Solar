@@ -26,15 +26,19 @@ MonoBehaviour:
   informationCelestial:
   - name: Marte
     about:
-      portuguese: --
+      portuguese: "Marte \xE9 o quarto planeta a partir do Sol, o segundo menor do
+        Sistema Solar, atr\xE1s apenas de Merc\xFArio. Batizado em homenagem a divindade
+        romana da guerra, muitas vezes \xE9 descrito como o \"Planeta Vermelho\",
+        porque o \xF3xido de ferro predominante em sua superf\xEDcie lhe d\xE1 uma
+        apar\xEAncia avermelhada."
       english: 
       spanish: 
     diameter: "<color=#B17F2A>Di\xE2metro: </color>6.779 km"
     composition: '<color=#B17F2A>Composition: </color>'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>4"
-    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-63\xB0C"
-    mass: "<color=#B17F2A>Massa: </color>6,42x10\xB2\xB3kg"
+    averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>-60\xB0C"
+    mass: "<color=#B17F2A>Massa: </color>6,39x10\xB2\xB3kg"
     lifePresent: '<color=#B17F2A>Vida: </color>Nenhuma'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>24,1 km/h"
-    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>1,36 km/h"
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>86,6 km/h"
+    rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>866 km/h"
     naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>2"

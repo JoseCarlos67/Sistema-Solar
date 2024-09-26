@@ -32,12 +32,12 @@ MonoBehaviour:
         ou Planeta Azul."
       english: 
       spanish: 
-    diameter: "<color=#B17F2A>Di\xE2metro: </color>12.756 km"
+    diameter: "<color=#B17F2A>Di\xE2metro: </color>12.74 km"
     composition: '<color=#B17F2A>Composition: </color>--'
     position: "<color=#B17F2A>Posi\xE7\xE3o: </color>3"
     averageTemperature: "<color=#B17F2A>Temperatura M\xE9dia: </color>15\xB0C"
-    mass: '<color=#B17F2A>Massa: </color>5,972 x 10^24 kg'
-    lifePresent: '<color=#B17F2A>Vida: </color>Sim'
-    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>29,78 km/s"
+    mass: '<color=#B17F2A>Massa: </color>5,97 x 10^24 kg'
+    lifePresent: '<color=#B17F2A>Vida: </color>10^30'
+    translationSpeed: "<color=#B17F2A>Transla\xE7\xE3o: </color>107.000 km/h"
     rotationSpeed: "<color=#B17F2A>Rota\xE7\xE3o: </color>1.670 km/h"
-    naturalSatellitesCount: "<color=#B17F2A>Rota\xE7\xE3o: </color>1"
+    naturalSatellitesCount: "<color=#B17F2A>Sat\xE9lite: </color>1"
