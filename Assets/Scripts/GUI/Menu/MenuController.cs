@@ -10,15 +10,20 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public GameObject menuOptions;
+    public bool isShowing;
     public GameObject menuVideo;
+    public GameObject menuControls;
     [SerializeField] private bool _optionsActivated = false;
 
     public TMP_Dropdown resolution;
     public Toggle vSinc;
     public Toggle windowMode;
 
+    public static MenuController instance;
+
     void Start()
     {
+        isShowing = false;
         ApplyConfigs();
     }
 
@@ -33,12 +38,18 @@ public class MenuController : MonoBehaviour
         {
             if (_optionsActivated == false)
             {
+                if (InformationControl.instance.isShowing == true)
+                {
+                    InformationControl.instance.NextSentence();
+                }
                 menuOptions.SetActive(true);
+                isShowing = true;
                 _optionsActivated = true;
             }
             else
             {
                 menuOptions.SetActive(false);
+                isShowing = false;
                 _optionsActivated = false;
             }
         }
@@ -46,7 +57,8 @@ public class MenuController : MonoBehaviour
 
     public void Controls()
     {
-
+        menuOptions.SetActive(false);;
+        menuControls.SetActive(true);
     }
 
     public void VideoOptions()
@@ -66,6 +78,7 @@ public class MenuController : MonoBehaviour
     {
         menuOptions.SetActive(true);
         menuVideo.SetActive(false);
+        menuControls.SetActive(false);
     }
 
     public void ExitSimulation()

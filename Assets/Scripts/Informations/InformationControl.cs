@@ -30,7 +30,7 @@ public class InformationControl : MonoBehaviour
 	public string[] informations;
 	
 	private CelestialInformation celestialInformation;
-	
+
 	public static InformationControl instance;
 	
 	private void Awake()
