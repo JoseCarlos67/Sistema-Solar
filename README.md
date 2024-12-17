@@ -27,13 +27,10 @@ Através de uma interface intuitiva e elementos interativos, os usuários podem:
 ## 🖼 **Demonstrações**  
 
 ### **Visualização do Sistema Solar**  
-![Sistema Solar](link-da-imagem-ou-gif)
+![Sistema Solar](Assets/Images/img1.png)
 
 ### **Movimentos e Eixos de Rotação**  
-![Eixo de Rotação](link-da-imagem-ou-gif)
-
-### **Menu de Configurações**  
-![Configurações](link-da-imagem-ou-gif)
+![Eixo de Rotação](Assets/Images/img2.png)
 
 ---
 
